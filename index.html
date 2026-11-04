@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Location Quiz</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+
+    <!-- Minimal branded header -->
+    <header class="brand-header">
+      <span class="brand-wordmark">Insight Consulting Graduate Scavenger Hunt</span>
+      <span class="brand-subtitle">Customer Location Quiz</span>
+    </header>
+
+    <main class="quiz-card">
+
+      <div class="progress-track">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+      <p id="progress-label" class="progress-label"></p>
+
+      <!-- Question view -->
+      <section id="question-view">
+        <p id="clue-text" class="clue-text"></p>
+        <p id="hint-text" class="hint-text hidden"></p>
+
+        <form id="answer-form">
+          <label for="answer-input" class="visually-hidden">Your guess</label>
+          <input
+            id="answer-input"
+            type="text"
+            placeholder="Enter your guess..."
+            autocomplete="off"
+            required
+          />
+          <button type="submit" class="btn btn-primary">Submit Guess</button>
+        </form>
+
+        <p id="feedback" class="feedback" aria-live="polite"></p>
+      </section>
+
+      <!-- Reveal view (shown after a correct guess) -->
+      <section id="reveal-view" class="hidden">
+        <h2 id="customer-name"></h2>
+        <p id="venue-info"></p>
+
+        <!-- Embedded map for the venue -->
+        <div class="map-container">
+          <iframe
+            id="venue-map"
+            title="Map showing venue location"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src=""
+          ></iframe>
+        </div>
+
+        <a id="directions-link" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          Get Directions
+        </a>
+        <button id="next-btn" class="btn btn-secondary">Next Question →</button>
+      </section>
+
+      <!-- Final summary view -->
+      <section id="summary-view" class="hidden">
+        <h2>Quiz Complete</h2>
+        <p id="score-text"></p>
+        <button id="restart-btn" class="btn btn-primary">Play Again</button>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
