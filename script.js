@@ -31,7 +31,7 @@ const quizData = [
   },
   {
     clues: [
-      "This customer was one of NWT's first and they license public places to play music - making sure performers get paid",
+      "This customer was one of our first and they license public places to play music - making sure performers get paid",
       "Hint: Their name is a three letter acronym."
     ],
     acceptableAnswers: ["PPL", "ppl", "PPL (Phonographic Performance Limited)", "Phonographic Performance Limited"],
